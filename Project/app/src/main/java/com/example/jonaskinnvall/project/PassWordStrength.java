@@ -1,7 +1,6 @@
 package com.example.jonaskinnvall.project;
 
 import android.graphics.Color;
-//import android.text.TextWatcher;
 
 public enum PassWordStrength {
 

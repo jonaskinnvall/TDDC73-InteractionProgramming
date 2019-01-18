@@ -53,7 +53,7 @@ public class AccountRegistration extends LinearLayout {
         regLayout = new LinearLayout(context);
         regLayout.setOrientation(VERTICAL);
         LinearLayout.LayoutParams regParams = new LinearLayout.LayoutParams(
-          LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+                LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         regLayout.setLayoutParams(regParams);
 
         scrollView = new ScrollView(context);
