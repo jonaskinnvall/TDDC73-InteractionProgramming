@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 public class StrengthCheck extends LinearLayout {
 
-    Context context;
-    EditText passWord;
-    TextView strText;
+    protected Context context;
+    protected EditText passWord;
+    protected TextView strText;
+    protected boolean isFilled = false;
 
     public StrengthCheck(Context cont) {
         super(cont);
@@ -53,12 +54,16 @@ public class StrengthCheck extends LinearLayout {
 
                 if (thePassword.isEmpty()) {
                     strText.setText("");
+                    isFilled = false;
                     return;
                 }
 
                 PassWordStrength str = PassWordStrength.calculateStrength(thePassword);
                 strText.setText(str.getText(context));
                 strText.setTextColor(str.getColor());
+
+                isFilled = true;
+
             }
         });
 
@@ -68,5 +73,9 @@ public class StrengthCheck extends LinearLayout {
 
     public String getText(){
         return passWord.getText().toString();
+    }
+
+    public boolean filled(){
+        return isFilled;
     }
 }
